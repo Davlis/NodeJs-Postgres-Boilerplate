@@ -1,3 +1,3 @@
-# node-boilerplate
+# node-postgres-boilerplate
 
-This is a boilerplate for NodeJs applications with jsonwebtoken authentication for postgres database.
+This is a boilerplate for NodeJS applications with postgres database and jsonwebtoken authentication
