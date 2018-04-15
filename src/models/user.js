@@ -40,20 +40,14 @@ const SCHEMA = {
     }
 }
 
-export default function(sequelize) {
+export default function (sequelize) {
     const User = sequelize.define('user', SCHEMA);
 
-    User.hashPassword = (password, salt) => {
-        return createHmac('sha512', salt)
-            .update(password)
-            .digest('hex')
-    }
+    User.hashPassword = (password, salt) => createHmac('sha512', salt)
+        .update(password)
+        .digest('hex')
 
-    User.getAuthToken = (email, salt) => {
-        return jwt.sign({
-            email,
-        }, salt)
-    }
+    User.getAuthToken = (email, salt) => jwt.sign({ email }, salt)
 
     return User
 }

@@ -8,6 +8,6 @@ async function seed() {
     const { sequelize, models } = initSequelizeFromConfig(config)
 
     // Application specific
-    
+ 
     sequelize.close()
 }

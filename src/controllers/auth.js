@@ -7,7 +7,7 @@ export async function login(req, res) {
 
     const user = await User.find({
         where: {
-            email: email,
+            email,
         },
     })
 
@@ -20,7 +20,7 @@ export async function login(req, res) {
 
     const token = User.getAuthToken(email, config.salt)
 
-    res.send({ user, token })       
+    res.send({ user, token })
 }
 
 export async function register(req, res) {
