@@ -10,5 +10,4 @@ export default function initSequelizeFromConfig(config) {
     }
 
     return { sequelize, models }
-
 }
